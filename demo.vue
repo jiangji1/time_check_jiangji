@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Time from '@/components/index.vue' // 这里是组件路径
+import Time from 'time_check_jiangji' // 这里是组件路径
 
 export default {
   name: 'A',
