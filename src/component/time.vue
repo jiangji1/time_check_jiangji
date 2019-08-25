@@ -197,15 +197,10 @@ export default {
         let year = +time.getFullYear()
         let month = +time.getMonth() + 1
         let day = +time.getDate()
-        // console.log({ year })
-        // console.log({ month })
-        // console.log({ day })
         let yearArr = []
         let monthArr = []
         let dayArr = []
         this.valueSelf = this.defaultValue
-        // if (this.defaultValue[0] && this.defaultValue[1] && this.defaultValue[2]) this.valueSelf = this.defaultValue
-        // else this.valueSelf = [year, month, day, ...this.value]
         if (month === 1 && day === 1) yearArr = [year - 3, year - 2, year - 1, year]
         else yearArr = [year - 3, year - 2, year - 1, year]
         let months = 13
@@ -215,16 +210,18 @@ export default {
           monthArr.push(i)
         }
         dayArr = this.getDayArr(year, month)
+        console.log(this.arr)
         if (this.arrayFirstdayAndLastday.length === 2) {
-         this.arrSelf = this.initArrFilterFromArrayFirstdayAndLastDay([yearArr, monthArr, dayArr, ...this.arr])
+         this.arrSelf = this.initArrFilterFromArrayFirstdayAndLastDay([yearArr, monthArr, dayArr])
         } else {
-          this.arrSelf = [yearArr, monthArr, dayArr, ...this.arr]
+          this.arrSelf = [yearArr, monthArr, dayArr]
         }
         // console.log(this.arrSelf)
       } else {
         this.arrSelf = this.arr
         this.valueSelf = this.defaultValue[0]/*  ? this.defaultValue : this.value */
       }
+      this.arrSelf = [...this.arrSelf, ...this.arr]
       this.$forceUpdate()
     },
     initArrFilterFromArrayFirstdayAndLastDay (arr) {

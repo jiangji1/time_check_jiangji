@@ -1,7 +1,7 @@
 <template>
   <div class="App">
     <div @click="timeShow = true">点击显示Time组件</div>
-    <Time v-if="timeShow" :cancleFn="cancleFn" :time="true" @click="clickFn" :arrayFirstdayAndLastday="['2012.6.8', '2019.6.10']" :stylBtn="{'color': '#00ffff'}" />
+    <Time v-if="timeShow" :cancleFn="cancleFn" :time="true" :defaultValue="[2019, 6, 5, '上午', '随便2']"  :arr="[['上午', '下午'], ['随便1', '随便2']]" @click="clickFn" :arrayFirstdayAndLastday="['2012.6.8', '2019.6.10']" :stylBtn="{'color': '#00ffff'}" />
   </div>
 </template>
 
