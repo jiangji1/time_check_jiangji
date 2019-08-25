@@ -1,14 +1,37 @@
 {
   "name": "time_check_jiangji",
-  "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "timecheck"
-  ],
+  "version": "1.0.3",
+  "description": "一个vue的滑动(时间)选择器",
+  "main": "lib/index.js",
   "author": "jiangji",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "k": "webpack-dev-server --mode development --open --watch",
+    "d": "webpack --mode production",
+    "p": "npx babel src/component --out-dir lib"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-stage-0": "^7.0.0",
+    "@babel/runtime": "^7.5.5",
+    "@babel/runtime-corejs2": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^1.0.0",
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  }
 }
