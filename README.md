@@ -4,7 +4,7 @@
 
 安装 npm install time_check_jiangji
 
-引入 import ReactTree from 'time_check_jiangji'
+引入 import Time from 'time_check_jiangji'
 
 ## 直接上干货，demo
 ```javascript
